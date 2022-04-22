@@ -1,6 +1,6 @@
 baseURL = 'https://www.mindthespines.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Mind the Spines'
 copyright = '2022 Devon Wolfkiel'
 
 [menu]

@@ -19,7 +19,6 @@ html, body {
 }
 
 body {
-  /* border: solid 4px lawngreen; */
   background-color: var(--background);
   color: var(--text);
   font-size: 1rem;
@@ -29,29 +28,12 @@ body {
 }
 
 .body-wrapper {
-  /* border: solid 4px orchid; */
   height: 100%;
   width: 90vw;
   max-width: 800px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   padding: 1rem;
-}
-
-header {
-  /* border: solid 4px tomato; */
-}
-
-nav {
-  /* border: solid 4px yellow; */
-}
-
-main {
-  /* border: solid 4px skyblue; */
-}
-
-footer {
-  /* border: solid 4px goldenrod; */
 }
 
 h1, h2, h3 {
@@ -72,9 +54,6 @@ a:visited {
 
 h1 a:link, h1 a:visited {
   text-decoration: none;
-}
-
-h1 a:link, h1 a:visited {
   color: unset;
 }
 
@@ -83,7 +62,6 @@ nav a:link, nav a:visited {
 }
 
 nav ul {
-  /* border: solid 4px hotpink; */
   list-style: none;
   padding-left: unset;
   display: flex;
@@ -113,4 +91,3 @@ nav li {
 .summary {
   margin: 1rem 0;
 }
-
