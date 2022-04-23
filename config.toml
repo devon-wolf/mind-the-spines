@@ -21,3 +21,7 @@ copyright = '2022 Devon Wolfkiel'
         name = "About"
         url = "/about/"
         weight = 2
+
+[params]
+  description = "A blog about books, ebooks, and personal libraries"
+  author = "Devon Wolfkiel"

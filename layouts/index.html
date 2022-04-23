@@ -1,11 +1,11 @@
 {{ define "main" }}
 	<main>
-		<!-- <h1>Recent Writing</h1>
+		<h1 class="title">Recent Posts</h1>
 		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-		{{ range $paginator.Pages }}
-			{{ .Render "summary" }}
-		{{ end }}
-		{{ partial "pagination.html" . }} -->
-		<p>This is the home page</p>
+		<ul class="summaries">
+			{{ range .Paginator.Pages }}
+			<li class="summary">{{ .Render "summary" }}</li>
+			{{ end }}
+		</ul>
 	</main>
 {{ end }}

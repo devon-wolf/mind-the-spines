@@ -75,12 +75,8 @@ nav li {
   color: var(--accent1);
 }
 
-.pagination {
-  font-size: medium;
-}
-
-.copyright {
-  font-size: medium;
+.pagination, .copyright, .taglist, .date {
+  font-size: .8rem;
 }
 
 .summaries {
@@ -91,3 +87,19 @@ nav li {
 .summary {
   margin: 1rem 0;
 }
+
+.taglist {
+  display: flex;
+}
+
+.taglist ul {
+  list-style: none;
+  padding-left: unset;
+  margin: 0 1rem;
+  display: flex;
+}
+
+.taglist li {
+  margin-right: 1rem;
+}
+
