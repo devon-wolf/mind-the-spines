@@ -1,6 +1,7 @@
 {{ define "main" }}
 	<main>
-		<h1 class="title">Recent Posts</h1>
+		<h1>Recent Posts</h1>
+		<hr />
 		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
 		<ul class="summaries">
 			{{ range .Paginator.Pages }}
