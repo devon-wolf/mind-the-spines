@@ -44,17 +44,27 @@ h1, h2 {
   font-size: 1.5rem;
 }
 
+h1 a:link, h1 a:visited {
+  text-decoration: none;
+  color: unset;
+}
+
+h2, h3, h4, .summary-title {
+  color: var(--accent1);
+}
+
+hr {
+  background-color: var(--navlink);
+  height: 2px;
+  border: none;
+}
+
 a:link {
   color: var(--link);
 }
 
 a:visited {
   color: var(--visited);
-}
-
-h1 a:link, h1 a:visited {
-  text-decoration: none;
-  color: unset;
 }
 
 nav a:link, nav a:visited {
@@ -71,16 +81,9 @@ nav li {
   margin-right: 1rem;
 }
 
-.title {
-  color: var(--accent1);
-}
 
-.pagination {
-  font-size: medium;
-}
-
-.copyright {
-  font-size: medium;
+.pagination, .copyright, .taglist, .date {
+  font-size: .8rem;
 }
 
 .summaries {
@@ -91,3 +94,19 @@ nav li {
 .summary {
   margin: 1rem 0;
 }
+
+.taglist {
+  display: flex;
+}
+
+.taglist ul {
+  list-style: none;
+  padding-left: unset;
+  margin: 0 1rem;
+  display: flex;
+}
+
+.taglist li {
+  margin-right: 1rem;
+}
+

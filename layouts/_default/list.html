@@ -1,9 +1,10 @@
 {{ define "main" }}
 	<main>
 		{{ if or .Title .Content }}
-			{{ with .Title }}<h1 class="title">{{ . }}</h1>{{ end }}
+			{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
 			{{ with .Content }}<div>{{ . }}</div>{{ end }}
 		{{ end }}
+		<hr />
 		<ul class="summaries">
 			{{ range .Paginator.Pages }}
 			<li class="summary">{{ .Render "summary" }}</li>

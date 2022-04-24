@@ -1,8 +1,5 @@
 <header>
 	<h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-	{{ with .Site.Params.description }}
-	<span>{{ .Site.Params.description }}</span>
-	{{ end }}
 	{{ with .Site.Menus.main }}
 	<nav>
 		<ul>

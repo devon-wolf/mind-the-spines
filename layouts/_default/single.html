@@ -1,20 +1,21 @@
 {{ define "main" }}
 	<main>
 		<article>
-			<h1 class="title">{{ .Title }}</h1>
-			{{ if or .Date }}
-			<time datetime="{{ .Date.Format "2006-01-02T15:04:05" }}">{{ .Date.Format "Jan 02 2006 3:04pm" }}</time>
-			{{ end }}
+			<h1>{{ .Title }}</h1>
+			{{ partial "date.html" . }}
+			<hr />
+			
 			{{ .Content }}
 
 			{{ with .Params.tags }}
-			<div>
+			<section class="taglist">
+				<label for="tags">Tags:</label>
 				<ul id="tags">
 					{{ range . }}
 					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
 					{{ end }}
 				</ul>
-			</div>
+			</section>
 			{{ end }}
 		</article>
 	</main>
