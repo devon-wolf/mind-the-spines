@@ -1,22 +1,11 @@
 {{ define "main" }}
-	<main>
-		<article>
-			<h1>{{ .Title }}</h1>
-			{{ partial "date.html" . }}
-			<hr />
-			
-			{{ .Content }}
-
-			{{ with .Params.tags }}
-			<section class="taglist">
-				<label for="tags">Tags:</label>
-				<ul id="tags">
-					{{ range . }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-					{{ end }}
-				</ul>
-			</section>
-			{{ end }}
-		</article>
-	</main>
+<main>
+	<article>
+		<h1>{{ .Title }}</h1>
+		{{ partial "date" . }}
+		<hr />
+		{{ .Content }}
+		{{ partial "tags" . }}
+	</article>
+</main>
 {{ end }}

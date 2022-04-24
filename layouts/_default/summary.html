@@ -1,6 +1,6 @@
 	<h1 class="summary-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-	{{ partial "date.html" . }}
-	{{ partial "tags.html" . }}
+	{{ partial "date" . }}
+	{{ partial "tags" . }}
 	<p>
 		{{ .Summary }}
 		{{ if .Truncated }}
