@@ -12,21 +12,35 @@
   }
 
   :root {
-    --background: #dce0de;
-    --text: #333436;
-    --accent1: #8d4643;
-    --navlink: #484b08;
-    --link: #175d72;
-    --visited: #4b5d63;
+    --background: {{ .Site.Params.backgroundColor | default "#f8f9fa" }};
+    --text: {{ .Site.Params.textColor | default "#34393f" }};
+    --accent: {{ .Site.Params.accentColor | default "#34393f" }};
+    --navlink: {{ .Site.Params.navColor | default "blue" }};
+    --link: {{ .Site.Params.linkColor | default "blue" }};
+    --visited: {{ .Site.Params.visitedLinkColor | default "purple" }};
+
+    --font: {{ .Site.Params.font | default "monospace" }}
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: {{ .Site.Params.backgroundColorDarkMode | default "#34393f" }};
+      --text: {{ .Site.Params.textColorDarkMode | default "#f8f9fa" }};
+      --accent: {{ .Site.Params.accentColorDarkMode | default "#f8f9fa" }};
+      --navlink: {{ .Site.Params.navColorDarkMode | default "skyblue" }};
+      --link: {{ .Site.Params.linkColorDarkMode | default "skyblue" }};
+      --visited: {{ .Site.Params.visitedLinkColorDarkMode | default "lightblue" }};
+    }
   }
 
   body {
     background-color: var(--background);
     color: var(--text);
     font-size: 1rem;
-    font-family: monospace;
+    font-family: var(--font);
     display: flex;
     justify-content: center;
+    line-height: 2;
   }
 
   .body-wrapper {
@@ -59,13 +73,11 @@
   h3,
   h4,
   .summary-title {
-    color: var(--accent1);
+    color: var(--accent);
   }
 
   hr {
-    background-color: var(--navlink);
-    height: 2px;
-    border: none;
+    border-color: var(--accent);
   }
 
   a:link {
@@ -81,17 +93,6 @@
     color: var(--navlink);
   }
 
-  nav ul {
-    list-style: none;
-    padding-left: unset;
-    display: flex;
-  }
-
-  nav li {
-    margin-right: 1rem;
-  }
-
-
   .pagination,
   .copyright,
   .taglist,
@@ -99,27 +100,29 @@
     font-size: .8rem;
   }
 
-  .summaries {
+  .summaries,
+  nav ul,
+  .taglist ul {
     list-style: none;
     padding-left: unset;
+  }
+
+  nav ul,
+  .taglist,
+  .taglist ul {
+    display: flex;
+  }
+
+  nav li,
+  .taglist li {
+    margin-right: 1rem;
   }
 
   .summary {
     margin: 1rem 0;
   }
 
-  .taglist {
-    display: flex;
-  }
-
   .taglist ul {
-    list-style: none;
-    padding-left: unset;
     margin: 0 1rem;
-    display: flex;
-  }
-
-  .taglist li {
-    margin-right: 1rem;
   }
 </style>

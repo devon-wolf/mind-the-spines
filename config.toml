@@ -25,3 +25,20 @@ copyright = '2022 Devon Wolfkiel'
 [params]
   description = "A blog about books, ebooks, and personal libraries"
   author = "Devon Wolfkiel"
+
+  # backgroundColor = ""
+  # textColor = ""
+  # accentColor = ""
+  # navColor = ""
+  # linkColor = ""
+  # visitedLinkColor = ""
+
+  # backgroundColorDarkMode = ""
+  # textColorDarkMode = ""
+  # accentColorDarkMode = ""
+  # navColorDarkMode = ""
+  # linkColorDarkMode = ""
+  # visitedLinkColorDarkMode = ""
+
+  # font = ""
+  
