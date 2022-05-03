@@ -1,7 +1,7 @@
 ---
 title: "The Why"
 date: 2022-05-02T17:56:27-07:00
-draft: true
+draft: false
 summary: "Why go to all this trouble?"
 tags: ["DRM", "library maintenance", "personal", "archiving", "books", "ebooks", "access", "apps", "reading"]
 ---
