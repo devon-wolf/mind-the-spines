@@ -40,7 +40,6 @@
     font-family: var(--font);
     display: flex;
     justify-content: center;
-    line-height: 2;
   }
 
   .body-wrapper {
@@ -108,9 +107,14 @@
   }
 
   nav ul,
-  .taglist,
   .taglist ul {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  .taglist {
+    display: grid;
+    grid-template-columns: min-content 1fr;
   }
 
   nav li,
@@ -119,10 +123,20 @@
   }
 
   .summary {
-    margin: 1rem 0;
+    margin: 1rem 0 2.5rem 0;
   }
 
   .taglist ul {
     margin: 0 1rem;
+  }
+
+  article p {
+    line-height: 1.5rem;
+
+    margin: 1.5rem 0;
+  }
+
+  article p + p {
+    text-indent: 1rem;
   }
 </style>
